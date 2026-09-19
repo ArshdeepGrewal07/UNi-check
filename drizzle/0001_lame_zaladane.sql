@@ -1,0 +1,12 @@
+CREATE TABLE `guardian_sessions` (
+	`id` text PRIMARY KEY NOT NULL,
+	`user_id` text NOT NULL,
+	`route` text NOT NULL,
+	`status` text NOT NULL,
+	`deadline` integer NOT NULL,
+	`created_at` integer NOT NULL,
+	`updated_at` integer NOT NULL,
+	FOREIGN KEY (`user_id`) REFERENCES `users`(`id`) ON UPDATE no action ON DELETE cascade
+);
+--> statement-breakpoint
+CREATE INDEX `guardian_user_created_idx` ON `guardian_sessions` (`user_id`,`created_at`);
