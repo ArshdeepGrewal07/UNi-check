@@ -1,0 +1,22 @@
+{
+  "name": "lpu-campus-local",
+  "main": "vinext/server/fetch-handler",
+  "compatibility_date": "2026-05-15",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "uni-connect-db",
+      "database_id": "c443f40c-edf5-414d-961a-20c25bb486d2",
+      "migrations_dir": "drizzle"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "BUCKET",
+      "bucket_name": "site-creator-r2"
+    }
+  ]
+}
